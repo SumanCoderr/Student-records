@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(360deg, rgb(4, 49, 65), rgb(141, 141, 211));
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  text-transform: uppercase;
+}
+/* heading of the page */
+header h1 {
+  margin-top: 3rem;
+}
+
+/* discription about the page  */
+header P {
+  font-size: large;
+  font-weight: bolder;
+  margin: 1rem 0 2rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 1px;
+}
+
+/* main body of the page  */
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* form section  */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+/* form */
+.form {
+  background: rgb(150, 148, 148);
+  border: 2px solid rgb(97, 96, 96);
+  height: 70vh;
+  margin-bottom: 3.4rem;
+  width: 30vw;
+}
+
+/* form heading  */
+.form h1 {
+  text-align: center;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+/* label in the form  */
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* inputs in the form */
+input {
+  border: none;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  font-size: medium;
+  height: 2.5rem;
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(229, 244, 241);
+}
+
+/* submit button  */
+#submit {
+  margin: 1rem auto;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 50px;
+  font-weight: bolder;
+  cursor: pointer;
+  background: rgb(163, 195, 115);
+}
+
+#submit:hover {
+  background: rgb(90, 110, 59);
+  box-shadow: 3px 3px 10px rgb(43, 51, 31);
+}
+
+/* records  */
+.records {
+  background: rgb(150, 148, 148);
+  border: 2px solid rgb(97, 96, 96);
+  max-height: 67.5vh;
+  margin-bottom: 3.4rem;
+  width: 50vw;
+}
+
+/* records heading  */
+.records h1 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  background: rgb(150, 148, 148);
+}
+
+/* table  */
+table {
+  border-collapse: collapse;
+}
+
+/* table heading  */
+#table thead tr th {
+  background: rgb(150, 148, 148);
+  width: 20vw;
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: sticky;
+  top: 3rem;
+}
+
+/* table data  */
+#body tr td {
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+#body tr:nth-child(even) {
+  background: rgb(161, 161, 214);
+}
+
+#body tr:nth-child(odd) {
+  background: rgb(200, 200, 238);
+}
+
+/* delete button  */
+.del {
+  background: rgb(225, 11, 11);
+  border-radius: 20px;
+  padding: 0.2rem;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.del:hover {
+  background: rgb(156, 9, 9);
+  color: bisque;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* edit button */
+.edit {
+  background: green;
+  border-radius: 20px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.edit:hover {
+  background: rgb(3, 66, 3);
+  color: rgb(216, 215, 214);
+  box-shadow: 2px 2px 2px black;
+}
+
+/* BREAKPOINTS */
+
+/* max-width : 768 */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    background: rgb(51, 131, 153);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    width: 70vw;
+    height: 48vh;
+  }
+
+  .records {
+    width: 90vw;
+  }
+
+  .records h1 {
+    width: 100%;
+  }
+}
+
+/* max-width : 360 */
+@media (max-width: 360px) {
+  body {
+    overflow-y: auto;
+  }
+
+  header h1 {
+    margin-top: 1rem;
+  }
+
+  .form {
+    width: 90vw;
+    height: 65vh;
+  }
+
+  .records {
+    max-height: 70vh;
+    margin-bottom: 3.4rem;
+  }
+
+  .records h1 {
+    font-size: 0.8rem;
+  }
+
+  #table thead tr th {
+    font-size: 0.5rem;
+    position: sticky;
+    top: 2rem;
+  }
+
+  .del {
+    border-radius: 10px;
+    padding: 0.2rem;
+    font-size: 0.5rem;
+    margin: 2px;
+  }
+
+  .edit {
+    border-radius: 10px;
+    padding: 0.2rem;
+    font-size: 0.5rem;
+    margin: 2px;
+  }
+
+  #body tr td {
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    font-size: 0.5rem;
+    border-radius: 0px;
+  }
+}

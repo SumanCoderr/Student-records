@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration System</title>
+    <link rel="icon" href="favicon.jpg" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Registration System</h1>
+      <p>Manage Records of Registered Students</p>
+    </header>
+    <section class="container">
+      <!-- form for getting information of the students-->
+      <section class="form">
+        <h1>Fill Details</h1>
+        <form autocomplete="off" onsubmit="event.preventDefault(); submiForm()">
+          <label for="name">STUDENT NAME:</label>
+          <input class="input" id="name" type="text" />
+
+          <label for="id">STUDENT ID:</label>
+          <input class="input" id="id" type="number" />
+
+          <label for="email">EMAIL ID:</label>
+          <input class="input" id="email" type="email" />
+
+          <label for="contact">CONTACT NO.:</label>
+          <input class="input" id="contact" type="number" />
+
+          <input type="submit" id="submit" value="Submit" />
+        </form>
+      </section>
+      <!-- table to store the students data -->
+      <section class="records">
+        <h1>Records</h1>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>STUDENT NAME</th>
+              <th>STUDENT ID</th>
+              <th>EMAIL ID</th>
+              <th>CONTACT NO</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody id="body"></tbody>
+        </table>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
